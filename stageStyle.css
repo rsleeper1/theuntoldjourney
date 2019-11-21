@@ -21,7 +21,7 @@ button{
     border-color: darkred;
     margin-top: 5%;
     width: 250pt;
-    height: 100pt;
+    height: 200pt;
 }
 
 button.option1{
@@ -35,6 +35,7 @@ button.option2{
 button:hover{
     background-color: silver;
 }
+
 
 div.leftBox{
     background-color: darkolivegreen;
