@@ -76,7 +76,8 @@ div.centerBox{
     background-color: purple;
     padding: 15pt;
     width: 600pt;
-    height: 475pt;
+    height: 400pt;
     font-size: 24pt;
     float: center;
+    margin-left: 28%;
 }

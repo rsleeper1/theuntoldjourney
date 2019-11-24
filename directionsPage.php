@@ -1,3 +1,10 @@
+<?php
+    include_once 'includes/dbh.inc.php';
+    session_start();
+    $_SESSION['userLives'] = 3;
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>

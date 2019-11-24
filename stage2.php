@@ -1,5 +1,6 @@
 <?php
     include_once 'includes/dbh.inc.php';
+    session_start();
 ?>
 
 
@@ -31,6 +32,8 @@
             </p>
             <button type="button" class="option1" id="option1">Grab a nearby rock and throw it to create a distraction.</button>
             <button type="button" class="option2" id="option2">Try and sneak by slowly without the troll noticing.</button>
+            <br>
+            <p id='lives'>Number of Lives: <?php echo $_SESSION['userLives']; ?></p>
         </div>
         <div class="rightBox" id="questions">
 

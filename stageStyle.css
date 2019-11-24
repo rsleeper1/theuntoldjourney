@@ -11,6 +11,20 @@ h1{
     border-width: thick;
     border-color: darkred;
 }
+ p{
+     font-size: 24pt;
+ }
+
+ input{
+     height: 24pt;
+     font-size: 100%;
+ }
+
+ input[type=submit]{
+     height: 32pt;
+     width: auto;
+     margin: 5%;
+ }
 
 button{
     color: white;
@@ -41,7 +55,7 @@ div.leftBox{
     background-color: darkolivegreen;
     padding: 15pt;
     width: 600pt;
-    height: 475pt;
+    height: 550pt;
     font-size: 24pt;
     float: left;
     margin-left: 3%;
@@ -51,10 +65,14 @@ div.rightBox{
     background-color: darkred;
     padding: 15pt;
     width: 600pt;
-    height: 475pt;
+    height: 550pt;
     font-size: 24pt;
     float: right;
     margin-right: 3%;
     text-align: center;
     font-size: 48pt;
+}
+
+#lives{
+    margin-top: 40%;
 }
