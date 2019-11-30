@@ -19,7 +19,7 @@
                 });
                 $("#option2").click(function(){
                     $("#questions").load("loadstage5-hardquestions.php");
-                    $("#option2").hide();
+                    $("#option1").hide();
                 });
             });
         </script>

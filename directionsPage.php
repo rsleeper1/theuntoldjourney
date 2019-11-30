@@ -33,7 +33,7 @@
                 <li>If the player answers the question correctly, he/she will move onto the next stage. If the question
                     is answered incorrectly, then the player will lose one life.
                 </li>
-                <li>A player may view a hint to help him/her with answering the question.</li>
+                <li>A player may hover the mouse over the "Tip Area" in order to view a tip for the question.</li>
                 <li>ANY ANSWERS THAT ARE NOT WHOLE NUMBERS MUST BE ROUNDED TO THE NEAREST HUNDRETH!
                     DO NOT LEAVE ANY ANSWERS IN IMPROPER FRACTIONS OR MIXED NUMBERS!
                 </li>

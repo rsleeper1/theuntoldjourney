@@ -21,15 +21,17 @@
                 echo "<script type='text/javascript'>alert('$message');location='titlePage.php';</script>";
             }
 
-            $sql = "SELECT * FROM hardquestions WHERE H_Question_ID=1;";
+            $sql = "SELECT * FROM hardquestions, tips WHERE hardquestions.Tip_ID = tips.Tip_ID AND H_Question_ID=1;";
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             if ($resultCheck > 0) {
                 while ($row = mysqli_fetch_assoc($result)){
                     echo $row['H_Question'] . "<br>";
+                    $questionTip = $row['Tip'];
                     $answer = $row['H_Answer'];
                 }
             }
+
             if (!isset($_POST["finalAnswer"])) {
                 
             } elseif ($_POST['finalAnswer'] == $answer) {
@@ -48,5 +50,9 @@
             <input type="submit" value="Submit"/>
             </p>
         </form>
+        <div class="tipArea">
+            <p>Tip Area</p>
+            <button type="button" class="tipButton" id="tipButton"><?php echo $questionTip; ?></button> 
+        </div>
     </body>
 </html>

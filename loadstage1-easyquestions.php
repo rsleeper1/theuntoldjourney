@@ -4,8 +4,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
-    <head></head>
+<html>  
     <body>
         <p>To advance, you must answer the following question correctly!</p>
         <?php
@@ -20,29 +19,23 @@
             function gameOver($message) {
                 echo "<script type='text/javascript'>alert('$message');location='titlePage.php';</script>";
             }
+ 
 
-            function getTip(){
-                $sql = "SELECT * FROM tips WHERE Tip_ID=3;";
-                $tipresult = mysqli_query($conn, $sql);
-                $tipresultCheck = mysqli_num_rows($tipresult);
-                if ($tipresultCheck > 0) {
-                    while ($row = mysqli_fetch_assoc($tipresult)){
-                        echo $row['Tip'] . "<br>";
-                    }
-                }
-            }
 
-            $sql = "SELECT * FROM easyquestions WHERE E_Question_ID=1;";
+            $sql = "SELECT * FROM easyquestions, tips WHERE easyquestions.Tip_ID = tips.Tip_ID AND E_Question_ID=1;";
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             if ($resultCheck > 0) {
                 while ($row = mysqli_fetch_assoc($result)){
                     echo $row['E_Question'] . "<br>";
+                    $questionTip = $row['Tip'];
                     $answer = $row['E_Answer'];
                 }
             }
-            if (!isset($_POST["finalAnswer"])) {
-                
+
+
+            if (!isset($_POST["finalAnswer"])){
+
             } elseif ($_POST['finalAnswer'] == $answer) {
                 goodAlert("Good job! You can move on to the next stage!");
             } else {
@@ -59,6 +52,9 @@
             <input type="submit" value="Submit"/>
             </p>
         </form>
-        <button type='button' onclick="getTip()">Tip</button>
+        <div class="tipArea">
+            <p>Tip Area</p>
+            <button type="button" class="tipButton" id="tipButton"><?php echo $questionTip; ?></button> 
+        </div>
     </body>
 </html>
