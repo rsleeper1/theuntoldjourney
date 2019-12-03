@@ -22,7 +22,7 @@
  
 
 
-            $sql = "SELECT * FROM heroku_dd8fcef5d8ead47.easyquestions, heroku_dd8fcef5d8ead47.tips WHERE heroku_dd8fcef5d8ead47.easyquestions.Tip_ID = heroku_dd8fcef5d8ead47.tips.Tip_ID AND heroku_dd8fcef5d8ead47.E_Question_ID=1;";
+            $sql = "SELECT * FROM easyquestions, tips WHERE easyquestions.Tip_ID = tips.Tip_ID AND E_Question_ID=1;";
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             if ($resultCheck > 0) {
