@@ -1,6 +1,4 @@
-<?php
-    include_once 'includes/dbh.inc.php';
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -10,6 +8,6 @@
     </head>
 
     <body>
-        <?php header("Location: titlePage.php"); ?>
+        <?php header("Location: includes/dbh.inc.php"); ?>
     </body>
 </html>
