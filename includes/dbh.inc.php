@@ -18,16 +18,7 @@ if (!$conn) {
 
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
 
-$sql = "SELECT * FROM easyquestions, tips WHERE easyquestions.Tip_ID = tips.Tip_ID AND E_Question_ID=1";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)){
-        echo $row['E_Question'] . "<br>";
-        $questionTip = $row['Tip'];
-        $answer = $row['E_Answer'];
-    }
-}
+
             
 
 
