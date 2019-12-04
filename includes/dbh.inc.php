@@ -18,10 +18,15 @@ if (!$conn) {
 
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
 
+$result = mysqli_query($conn,"SELECT * FROM easyquestions");
+echo $result;           
 
-            
 
 
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 mysqli_close($conn);
 ?>
 
