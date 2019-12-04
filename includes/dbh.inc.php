@@ -17,15 +17,6 @@ if (!$conn) {
 }
 
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
-
-
-$sql = "SELECT * FROM heroku_dd8fcef5d8ead47.questions";
-$result = $conn->query($sql);
-echo $result;
-echo "0 results";
-
-
 
 
 mysqli_close($conn);
