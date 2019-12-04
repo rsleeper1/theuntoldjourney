@@ -20,16 +20,16 @@ echo "Success: A proper connection to MySQL was made! The my_db database is grea
 echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
 
 
- $sql = "SELECT * FROM easyquestions, tips WHERE easyquestions.Tip_ID = tips.Tip_ID AND E_Question_ID=1;";
-            $result = mysqli_query($conn, $sql);
-            $resultCheck = mysqli_num_rows($result);
-            if ($resultCheck > 0) {
-                while ($row = mysqli_fetch_assoc($result)){
-                    echo $row['E_Question'] . "<br>";
-                    $questionTip = $row['Tip'];
-                    $answer = $row['E_Answer'];
-                }
-            }
+$sql = "SELECT * FROM heroku_dd8fcef5d8ead47.easyquestions, heroku_dd8fcef5d8ead47.tips WHERE heroku_dd8fcef5d8ead47.easyquestions.Tip_ID = heroku_dd8fcef5d8ead47.tips.Tip_ID AND heroku_dd8fcef5d8ead47.E_Question_ID=1;";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
+if ($resultCheck > 0) {
+    while ($row = mysqli_fetch_assoc($result)){
+        echo $row['E_Question'] . "<br>";
+        $questionTip = $row['Tip'];
+        $answer = $row['E_Answer'];
+    }
+}
 
 
 mysqli_close($conn);
