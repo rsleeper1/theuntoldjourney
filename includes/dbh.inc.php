@@ -20,8 +20,16 @@ echo "Success: A proper connection to MySQL was made! The my_db database is grea
 echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
 
 
-$sql = "SELECT * FROM easyquestions;";
-echo $sql;
+$sql = "SELECT * FROM easyquestions";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Question: " . $row["E_Question"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
 
 
 
