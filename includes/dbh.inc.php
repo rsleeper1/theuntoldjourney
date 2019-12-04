@@ -20,16 +20,11 @@ echo "Success: A proper connection to MySQL was made! The my_db database is grea
 echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
 
 
-$sql = "SELECT * FROM heroku_dd8fcef5d8ead47.easyquestions";
+$sql = "SELECT * FROM easyquestions";
 $result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Question: " . $row["E_Question"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
+echo $result;
+echo "0 results";
+
 
 
 
