@@ -1,3 +1,7 @@
+<!-- Refer to loadstage1-easyquestions.php for comments on functionality of this page. There may have been a way
+to reduce redundancy, however I ran out of time due to some technical difficulties. The only difference between
+the loadstage PHP files are the type of questions and alert descriptions. --> 
+
 <?php
     include_once 'includes/dbh.inc.php';
     session_start();
@@ -31,6 +35,18 @@
                     $answer = $row['E_Answer'];
                 }
             }
+
+            if ($_SERVER["REQUEST_METHOD"] == "post"){
+                $finalAnswer = secureInput($_POST["finalAnswer"]);
+            }            
+
+            function secureInput($input){
+                $input = trim($input);
+                $input = stripslashes($input);
+                $input = htmlspecialchars($input);
+                return $input;
+            }
+
             if (!isset($_POST["finalAnswer"])) {
                 
             } elseif ($_POST['finalAnswer'] == $answer) {
@@ -43,7 +59,7 @@
                 badAlert("Oh no, you did not make the shelter before dark. You must begin the stage all over!");
             }
         ?>
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
             <p><label for="finalAnswer">Answer:</label>
             <input type="float" id="finalAnswer" name="finalAnswer"/><br>
             <input type="submit" value="Submit"/>

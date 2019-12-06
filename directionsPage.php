@@ -1,5 +1,8 @@
+<!-- This is the directions page that tells the initial story of the adventure game and then explains the rules
+and directions for how to play and answer the questions correctly -->
+
 <?php
-    include_once 'includes/dbh.inc.php';
+    //Keeps track of the number of lives the user has left.
     session_start();
     $_SESSION['userLives'] = 3;
 ?>

@@ -1,3 +1,7 @@
+<!-- Refer to stage1.php for comments on the functionality of the stage PHP files. There probably is a way to reduce
+the redundancy of these stage files, however I ran out of time due to some technical issues I ran into. The only
+difference between the stage files are the descriptions of the story and the options the user gets to choose. -->
+
 <?php
     include_once 'includes/dbh.inc.php';
     session_start();

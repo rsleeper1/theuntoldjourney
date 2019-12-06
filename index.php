@@ -1,4 +1,5 @@
-
+<!-- This is the index page that the program starts at and then directs the user to the title page.
+This is a simple adventure game for grade school kids to help them pratice their math skills. -->
 
 <!DOCTYPE html>
 <html>
@@ -8,6 +9,6 @@
     </head>
 
     <body>
-        <?php header("Location: includes/dbh.inc.php"); ?>
+        <?php header("Location: titlePage.php"); ?>
     </body>
 </html>

@@ -1,3 +1,6 @@
+<!-- This is the winner page. The user can only get to this page if he/she answers all of the questions correctly
+on each stage before running out of lives. -->
+
 <?php
     include_once 'includes/dbh.inc.php';
 ?>
