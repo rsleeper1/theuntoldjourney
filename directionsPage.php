@@ -37,7 +37,7 @@ and directions for how to play and answer the questions correctly -->
                     is answered incorrectly, then the player will lose one life.
                 </li>
                 <li>A player may hover the mouse over the "Tip Area" in order to view a tip for the question.</li>
-                <li>ANY ANSWERS THAT ARE NOT WHOLE NUMBERS MUST BE ROUNDED TO THE NEAREST HUNDRETH!
+                <li style="color:white;">ANY ANSWERS THAT ARE NOT WHOLE NUMBERS MUST BE ROUNDED TO THE NEAREST HUNDRETH!
                     DO NOT LEAVE ANY ANSWERS IN IMPROPER FRACTIONS OR MIXED NUMBERS!
                 </li>
                 <li>Good luck and have fun!</li>

@@ -23,7 +23,6 @@ h1{
 
  input[type=submit]{
      height: 32pt;
-     width: auto;
      margin: 5%;
  }
 
@@ -35,8 +34,7 @@ button{
     border-width: thick;
     border-color: darkred;
     margin-top: 5%;
-    width: 250pt;
-    height: 200pt;
+    width: 40%;
 }
 
 button.option1{
@@ -54,11 +52,10 @@ button:hover{
 button.tipButton{
     background-color: black;
     color: black;
-    width: 500pt;
+    width: 70%;
     height: 100pt;
     font-size: 20pt;
     margin-top: 3%;
-    padding-top: 0pt;
 }
 
 button.tipButton:hover{
@@ -66,11 +63,12 @@ button.tipButton:hover{
 }
 
 
+
 div.leftBox{
     background-color: darkolivegreen;
     padding: 15pt;
-    width: 600pt;
-    height: 550pt;
+    width: 40%;
+    height: 40%;
     font-size: 24pt;
     float: left;
     margin-left: 3%;
@@ -79,8 +77,8 @@ div.leftBox{
 div.rightBox{
     background-color: darkred;
     padding: 15pt;
-    width: 600pt;
-    height: 550pt;
+    width: 40%;
+    height: 600pt;
     font-size: 24pt;
     float: right;
     margin-right: 3%;
@@ -90,10 +88,9 @@ div.rightBox{
 
 div.tipArea{
     font-size: 20pt;
-    margin: 0%;
-    padding: 0pt;
 }
 
 #lives{
     margin-top: 40%;
+    padding-top: 25pt;
 }

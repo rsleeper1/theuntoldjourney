@@ -4,7 +4,7 @@ html{
 }
 
 html.titlePage{
-    background-image: url("Grass.JPG");
+    background-image: url("forest.jpg");
 }
 
 h1{
@@ -21,7 +21,8 @@ button{
     color: white;
     text-align: center;
     margin-top: 10%;
-    margin-left: 37%;
+    margin-left: 38%;
+    margin-right: 38%;
     font-size: 36pt;
     background-color: darkolivegreen;
     border-width: thick;
@@ -55,8 +56,7 @@ button.directionsButton{
 div.leftBox{
     background-color: darkolivegreen;
     padding: 15pt;
-    width: 600pt;
-    height: 475pt;
+    width: 40%;
     font-size: 24pt;
     float: left;
     margin-left: 3%;
@@ -65,19 +65,16 @@ div.leftBox{
 div.rightBox{
     background-color: darkred;
     padding: 15pt;
-    width: 600pt;
-    height: 475pt;
+    width: 40%;
     font-size: 24pt;
     float: right;
     margin-right: 3%;
 }
 
 div.centerBox{
-    background-color: purple;
+    background-color: darkred;
     padding: 15pt;
-    width: 600pt;
-    height: 400pt;
     font-size: 24pt;
     float: center;
-    margin-left: 28%;
+    text-align: center;
 }
